@@ -1,0 +1,419 @@
+--
+-- PostgreSQL database cluster dump
+--
+
+-- Started on 2019-08-28 23:04:37
+
+SET default_transaction_read_only = off;
+
+SET client_encoding = 'LATIN1';
+SET standard_conforming_strings = on;
+
+--
+-- Roles
+--
+
+CREATE ROLE postgres;
+ALTER ROLE postgres WITH SUPERUSER INHERIT CREATEROLE CREATEDB LOGIN REPLICATION BYPASSRLS PASSWORD 'md52ccb65e7978f6372adf7bd843f07428b';
+
+
+
+
+
+
+\connect template1
+
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 11.5
+-- Dumped by pg_dump version 11.5
+
+-- Started on 2019-08-28 23:04:37
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'LATIN1';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+-- Completed on 2019-08-28 23:04:38
+
+--
+-- PostgreSQL database dump complete
+--
+
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 11.5
+-- Dumped by pg_dump version 11.5
+
+-- Started on 2019-08-28 23:04:38
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'LATIN1';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- TOC entry 2814 (class 1262 OID 16393)
+-- Name: cadastro; Type: DATABASE; Schema: -; Owner: postgres
+--
+
+CREATE DATABASE cadastro WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'Portuguese_Brazil.1252' LC_CTYPE = 'Portuguese_Brazil.1252';
+
+
+ALTER DATABASE cadastro OWNER TO postgres;
+
+\connect cadastro
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'LATIN1';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- TOC entry 197 (class 1259 OID 16492)
+-- Name: regnascimento; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.regnascimento (
+    nlivro text,
+    nulivro integer,
+    nupagina integer,
+    nuregistro integer,
+    daregistro date,
+    nregistrado text,
+    sexo text,
+    danascimento date,
+    hnascimento time without time zone,
+    npai text,
+    danascimentopai date,
+    cidadepai text,
+    nmae text,
+    danascimentomae date,
+    cidademae text,
+    regprazo text,
+    idadedopai integer,
+    idadedamae integer,
+    ndnvdo text
+);
+
+
+ALTER TABLE public.regnascimento OWNER TO postgres;
+
+--
+-- TOC entry 196 (class 1259 OID 16408)
+-- Name: serial; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.serial
+    START WITH 2
+    INCREMENT BY 1
+    NO MINVALUE
+    MAXVALUE 999
+    CACHE 1;
+
+
+ALTER TABLE public.serial OWNER TO postgres;
+
+--
+-- TOC entry 2808 (class 0 OID 16492)
+-- Dependencies: 197
+-- Data for Name: regnascimento; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.regnascimento (nlivro, nulivro, nupagina, nuregistro, daregistro, nregistrado, sexo, danascimento, hnascimento, npai, danascimentopai, cidadepai, nmae, danascimentomae, cidademae, regprazo, idadedopai, idadedamae, ndnvdo) FROM stdin;
+A	1234	1234	1234	1995-01-23	Rodrigo	Masculino	1995-01-23	21:48:00	Neto	1987-12-12	Taubate/SP	Maura	1987-11-12	Taubate/SP	SIM	\N	\N	\N
+A	12345	12345	12345	1987-02-23	Rodrigo Justen	[Selecione]	1995-01-23	21:30:00	José Alves	1998-02-24	Taubate/SP	Maura Cristina	1955-01-01	São José dos Campos/UF		\N	\N	\N
+A	12345	12345	12345	1987-02-23	Thaina Teles	[Selecione]	1995-01-23	21:30:00	José Alves	1998-02-24	Taubate/SP	Maura Cristina	1955-01-01	São José dos Campos/UF		\N	\N	\N
+A	12345	12345	12345	1987-02-23	Bruno Justen	[Selecione]	1995-01-23	21:30:00	José Alves	1998-02-24	Taubate/SP	Maura Cristina	1955-01-01	São José dos Campos/UF		\N	\N	\N
+A	12345	12345	12345	1987-02-23	Bruno Justen2	[Selecione]	1995-01-23	21:30:00	José Alves	1998-02-24	Taubate/SP	Maura Cristina	1955-01-01	São José dos Campos/UF		\N	\N	\N
+A	12345	12345	12345	1987-02-23	Bruno Justen233	[Selecione]	1995-01-23	21:30:00	José Alves	1998-02-24	Taubate/SP	Maura Cristina	1955-01-01	São José dos Campos/UF		\N	\N	\N
+A	12345	12345	12345	1987-02-23	Maura Cristina	[Selecione]	1995-01-23	21:30:00	José Alves	1998-02-24	Taubate/SP	Maura Cristina	1955-01-01	São José dos Campos/UF		\N	\N	\N
+A	12345	12345	12345	2019-08-27	Rodrigo Justen	[Selecione]	2019-08-27	21:30:00	José Alves	2019-08-27	Taubate/SP	Maura Cristina	2019-08-27	São José dos Campos/UF		\N	\N	\N
+A	12345	12345	12345	2019-08-27	Rodrigo Justen Data	[Selecione]	2019-08-27	21:30:00	José Alves	2019-08-27	Taubate/SP	Maura Cristina	2019-08-27	São José dos Campos/UF	SIM	\N	\N	\N
+A	12345	12345	12345	2019-08-27	teste idade	[Selecione]	2019-08-27	21:30:00	José Alves	1995-01-23	Taubate/SP	Maura Cristina	1996-09-22	São José dos Campos/UF	SIM	24	22	\N
+A	12345	12345	12345	2019-08-27	Rodrigo Justen	[Selecione]	2018-08-27	21:30:00	José Alves	2019-08-27	Taubate/SP	Maura Cristina	2019-08-27	São José dos Campos/UF	SIM	0	-1	\N
+A	12345	12345	12345	2019-08-27	Rodrigo Justen	[Selecione]	2018-08-27	21:30:00	José Alves	2019-08-27	Taubate/SP	Maura Cristina	2019-08-27	São José dos Campos/UF	NAO	0	0	\N
+A	12345	12345	12345	2019-08-27	Rodrigo Justen	[Selecione]	2019-08-27	21:30:00	José Alves	1947-11-11	Taubate/SP	Maura Cristina	1947-11-11	São José dos Campos/UF	SIM	71	71	\N
+A	12345	12345	12345	2019-08-27	Rodrigo Justen	[Selecione]	2019-08-27	21:30:00	José Alves	1947-11-11	Taubate/SP	Maura Cristina	1947-11-11	São José dos Campos/UF	NAO	71	71	\N
+A	12345	12345	12345	2019-08-27	Rodrigo Justen	Masculino	2018-08-27	21:30:00	José Alves	1981-01-01	Taubate/SP	Maura Cristina	1981-01-01	São José dos Campos/UF	SIM	38	37	\N
+A	12345	12345	12345	2019-08-27	Rodrigo Justen	Masculino	2018-08-27	21:30:00	José Alves	1981-01-01	Taubate/SP	Maura Cristina	1981-01-01	São José dos Campos/UF	NAO	38	38	\N
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	1998-08-28	Taubate/SP	Maura Cristina	1997-08-28	São José dos Campos/UF	SIM	21	22	13512796-0
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	1995-08-28	Taubate/SP	Maura Cristina	1996-08-28	São José dos Campos/UF		24	23	12345
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	1995-08-28	Taubate/SP	Maura Cristina	1996-08-28	São José dos Campos/UF		24	23	46231654-7
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	1995-08-28	Taubate/SP	Maura Cristina	1996-08-28	São José dos Campos/UF		24	23	46231654-8
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	1995-08-28	Taubate/SP	Maura Cristina	1985-08-28	São José dos Campos/UF		24	34	14932163-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	14932163-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	14932163-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	12096654-9
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	12096654-9
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	12096654-8
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	16123365-1
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	16123365-2
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	12345
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	12345
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	12345
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	12345
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	NAO	0	0	12345
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	12345
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Feminino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	12345678
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	NAO	0	0	01235640
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	NAO	0	0	03935640
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	NAO	0	0	10236543
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	NAO	0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	NAO	0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	12345678
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	1234578-8
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	1234578-8
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	1234578-8
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	01235640
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	03935640
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	10236543
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	44231654-5
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	44231654-2
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	44231654-2
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	12345678
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	44231654-4
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	44231654-4
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	44231654-4
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	44231654-4
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Feminino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	1234567894
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	44231654-8
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	30-51354968-6
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	30-51354968-6
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	01235640
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	 03935640
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	 10236543
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	46231654-7
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	47965102-9
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	47965102-9
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	30-49532165-8
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	30-51354968-6
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	30-50512531-7
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	30-50512531-7
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	30505125317
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	442316545
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	00987321
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	00987321
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	01655432
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	11423015
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	12096654-9
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	120966549
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	12941231-6
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	13475963-6
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	13512796-0
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	13512796-0
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	14932163-5
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	149321635
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	15632169-6
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	15932165-4
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	16123365-1
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	161233651
+A	12345	12345	12345	2018-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	1995-01-28	Taubate/SP	Maura Cristina	1995-01-28	São José dos Campos/UF	SIM	23	24	00987456
+A	1234	1234	1234	1995-01-23	Rodrigo	Masculino	1995-01-23	21:48:00	Neto	1987-12-12	Taubate/SP	Maura	1987-11-12	Taubate/SP	SIM	\N	\N	\N
+A	12345	12345	12345	1987-02-23	Rodrigo Justen	[Selecione]	1995-01-23	21:30:00	José Alves	1998-02-24	Taubate/SP	Maura Cristina	1955-01-01	São José dos Campos/UF		\N	\N	\N
+A	12345	12345	12345	1987-02-23	Thaina Teles	[Selecione]	1995-01-23	21:30:00	José Alves	1998-02-24	Taubate/SP	Maura Cristina	1955-01-01	São José dos Campos/UF		\N	\N	\N
+A	12345	12345	12345	1987-02-23	Bruno Justen	[Selecione]	1995-01-23	21:30:00	José Alves	1998-02-24	Taubate/SP	Maura Cristina	1955-01-01	São José dos Campos/UF		\N	\N	\N
+A	12345	12345	12345	1987-02-23	Bruno Justen2	[Selecione]	1995-01-23	21:30:00	José Alves	1998-02-24	Taubate/SP	Maura Cristina	1955-01-01	São José dos Campos/UF		\N	\N	\N
+A	12345	12345	12345	1987-02-23	Bruno Justen233	[Selecione]	1995-01-23	21:30:00	José Alves	1998-02-24	Taubate/SP	Maura Cristina	1955-01-01	São José dos Campos/UF		\N	\N	\N
+A	12345	12345	12345	1987-02-23	Maura Cristina	[Selecione]	1995-01-23	21:30:00	José Alves	1998-02-24	Taubate/SP	Maura Cristina	1955-01-01	São José dos Campos/UF		\N	\N	\N
+A	12345	12345	12345	2019-08-27	Rodrigo Justen	[Selecione]	2019-08-27	21:30:00	José Alves	2019-08-27	Taubate/SP	Maura Cristina	2019-08-27	São José dos Campos/UF		\N	\N	\N
+A	12345	12345	12345	2019-08-27	Rodrigo Justen Data	[Selecione]	2019-08-27	21:30:00	José Alves	2019-08-27	Taubate/SP	Maura Cristina	2019-08-27	São José dos Campos/UF	SIM	\N	\N	\N
+A	12345	12345	12345	2019-08-27	teste idade	[Selecione]	2019-08-27	21:30:00	José Alves	1995-01-23	Taubate/SP	Maura Cristina	1996-09-22	São José dos Campos/UF	SIM	24	22	\N
+A	12345	12345	12345	2019-08-27	Rodrigo Justen	[Selecione]	2018-08-27	21:30:00	José Alves	2019-08-27	Taubate/SP	Maura Cristina	2019-08-27	São José dos Campos/UF	SIM	0	-1	\N
+A	12345	12345	12345	2019-08-27	Rodrigo Justen	[Selecione]	2018-08-27	21:30:00	José Alves	2019-08-27	Taubate/SP	Maura Cristina	2019-08-27	São José dos Campos/UF	NAO	0	0	\N
+A	12345	12345	12345	2019-08-27	Rodrigo Justen	[Selecione]	2019-08-27	21:30:00	José Alves	1947-11-11	Taubate/SP	Maura Cristina	1947-11-11	São José dos Campos/UF	SIM	71	71	\N
+A	12345	12345	12345	2019-08-27	Rodrigo Justen	[Selecione]	2019-08-27	21:30:00	José Alves	1947-11-11	Taubate/SP	Maura Cristina	1947-11-11	São José dos Campos/UF	NAO	71	71	\N
+A	12345	12345	12345	2019-08-27	Rodrigo Justen	Masculino	2018-08-27	21:30:00	José Alves	1981-01-01	Taubate/SP	Maura Cristina	1981-01-01	São José dos Campos/UF	SIM	38	37	\N
+A	12345	12345	12345	2019-08-27	Rodrigo Justen	Masculino	2018-08-27	21:30:00	José Alves	1981-01-01	Taubate/SP	Maura Cristina	1981-01-01	São José dos Campos/UF	NAO	38	38	\N
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	1998-08-28	Taubate/SP	Maura Cristina	1997-08-28	São José dos Campos/UF	SIM	21	22	13512796-0
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	1995-08-28	Taubate/SP	Maura Cristina	1996-08-28	São José dos Campos/UF		24	23	12345
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	1995-08-28	Taubate/SP	Maura Cristina	1996-08-28	São José dos Campos/UF		24	23	46231654-7
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	1995-08-28	Taubate/SP	Maura Cristina	1996-08-28	São José dos Campos/UF		24	23	46231654-8
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	1995-08-28	Taubate/SP	Maura Cristina	1985-08-28	São José dos Campos/UF		24	34	14932163-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	14932163-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	14932163-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	12096654-9
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	12096654-9
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	12096654-8
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	16123365-1
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	16123365-2
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	12345
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	12345
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	12345
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	12345
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	NAO	0	0	12345
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	[Selecione]	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	12345
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Feminino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	12345678
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	NAO	0	0	01235640
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	NAO	0	0	03935640
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	NAO	0	0	10236543
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	NAO	0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	NAO	0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	12345678
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	1234578-8
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	1234578-8
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	1234578-8
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	01235640
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	03935640
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	10236543
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	44231654-5
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	44231654-2
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	44231654-2
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	12345678
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	44231654-4
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	44231654-4
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	44231654-4
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	44231654-4
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Feminino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	1234567894
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	44231654-8
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	30-51354968-6
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	30-51354968-6
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	01235640
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	 03935640
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	 10236543
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	46231654-7
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	47965102-9
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	47965102-9
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	30-49532165-8
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	30-51354968-6
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	30-50512531-7
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	30-50512531-7
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	30505125317
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	44231654-5
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	442316545
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	00987321
+A	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	00987321
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	01655432
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	11423015
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	12096654-9
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	120966549
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	12941231-6
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	13475963-6
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	13512796-0
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF	SIM	0	0	13512796-0
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	14932163-5
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	149321635
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	15632169-6
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	15932165-4
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	16123365-1
+C AUX	12345	12345	12345	2019-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	2019-08-28	Taubate/SP	Maura Cristina	2019-08-28	São José dos Campos/UF		0	0	161233651
+A	12345	12345	12345	2018-08-28	Rodrigo Justen	Masculino	2019-08-28	21:30:00	José Alves	1995-01-28	Taubate/SP	Maura Cristina	1995-01-28	São José dos Campos/UF	SIM	23	24	00987456
+\.
+
+
+--
+-- TOC entry 2815 (class 0 OID 0)
+-- Dependencies: 196
+-- Name: serial; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.serial', 22, true);
+
+
+-- Completed on 2019-08-28 23:04:38
+
+--
+-- PostgreSQL database dump complete
+--
+
+\connect postgres
+
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 11.5
+-- Dumped by pg_dump version 11.5
+
+-- Started on 2019-08-28 23:04:38
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'LATIN1';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- TOC entry 1 (class 3079 OID 16384)
+-- Name: adminpack; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS adminpack WITH SCHEMA pg_catalog;
+
+
+--
+-- TOC entry 2806 (class 0 OID 0)
+-- Dependencies: 1
+-- Name: EXTENSION adminpack; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION adminpack IS 'administrative functions for PostgreSQL';
+
+
+-- Completed on 2019-08-28 23:04:39
+
+--
+-- PostgreSQL database dump complete
+--
+
+-- Completed on 2019-08-28 23:04:39
+
+--
+-- PostgreSQL database cluster dump complete
+--
+
