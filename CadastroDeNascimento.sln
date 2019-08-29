@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroDeNascimento", "CadastroDeNascimento\CadastroDeNascimento.csproj", "{54183AE1-7CCB-4979-9265-178F740A66C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroDeNascimento.Tests", "CadastroDeNascimento.Tests\CadastroDeNascimento.Tests.csproj", "{42DD52F8-E293-4861-90EB-0F447DC4D2AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54183AE1-7CCB-4979-9265-178F740A66C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54183AE1-7CCB-4979-9265-178F740A66C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54183AE1-7CCB-4979-9265-178F740A66C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54183AE1-7CCB-4979-9265-178F740A66C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42DD52F8-E293-4861-90EB-0F447DC4D2AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42DD52F8-E293-4861-90EB-0F447DC4D2AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42DD52F8-E293-4861-90EB-0F447DC4D2AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42DD52F8-E293-4861-90EB-0F447DC4D2AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9E2DF9DA-1160-4ACE-8587-592BC820412D}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,83 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\digoj\\source\\repos\\CadastroDeNascimento\\Metodos.Tests\\Metodos.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\digoj\\source\\repos\\CadastroDeNascimento\\CadastroDeNascimento\\CadastroDeNascimento.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\digoj\\source\\repos\\CadastroDeNascimento\\CadastroDeNascimento\\CadastroDeNascimento.csproj",
+        "projectName": "CadastroDeNascimento",
+        "projectPath": "C:\\Users\\digoj\\source\\repos\\CadastroDeNascimento\\CadastroDeNascimento\\CadastroDeNascimento.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\digoj\\source\\repos\\CadastroDeNascimento\\Metodos.Tests\\Metodos.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\digoj\\source\\repos\\CadastroDeNascimento\\Metodos.Tests\\Metodos.Tests.csproj",
+        "projectName": "Metodos.Tests",
+        "projectPath": "C:\\Users\\digoj\\source\\repos\\CadastroDeNascimento\\Metodos.Tests\\Metodos.Tests.csproj",
+        "packagesPath": "C:\\Users\\digoj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\digoj\\source\\repos\\CadastroDeNascimento\\Metodos.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\digoj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Users\\digoj\\source\\repos\\CadastroDeNascimento\\CadastroDeNascimento\\CadastroDeNascimento.csproj": {
+                "projectPath": "C:\\Users\\digoj\\source\\repos\\CadastroDeNascimento\\CadastroDeNascimento\\CadastroDeNascimento.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.15.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
